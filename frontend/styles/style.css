@@ -406,7 +406,7 @@ h2 {
     opacity: 0.9;
 }
 
-/* Pulse animation for buttons */
+
 .pulse {
     animation: pulse 2s infinite;
 }
@@ -483,7 +483,7 @@ h2 {
 
     -----------  /* Grid */  -----
 
-/* Why Us Section */
+
 .why-us-section {
     background-color: var(--color-background);
     padding: 5rem 1rem;
@@ -570,7 +570,7 @@ h2 {
     line-height: 1.6;
 }
 
-/* Results Section */
+/* Resultados Section */
 .results-section {
     background: linear-gradient(rgba(14, 86, 115, 0.95), rgba(14, 86, 115, 0.95)),
                 url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80') center/cover fixed;
