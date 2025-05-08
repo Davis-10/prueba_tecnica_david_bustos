@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes de Transformación - DavisTrainer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&family=Poppins:wght@400;600&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container nav-container--plans">
+            <div class="logo-container">
+                <h2>DavisTrainer</h2>
+            </div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="#plans">Planes</a>
+                <a href="#contact">Contacto</a>
+                <a href="auth/login.html" class="btn-login">Iniciar Sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="plans-details" class="plans-details-section">
+            <div class="plans-details-container">
+                <h1>Planes de Transformación</h1>
+                <p>Elige el plan que mejor se adapte a tus objetivos y comienza tu transformación hoy mismo.</p>
+
+                <div class="plans-grid">
+                    <div class="plan-detail">
+                        <h2>Plan Basic</h2>
+                        <p>Acceso a programa de entrenamiento personalizado durante 1 mes, información nutricional básica, descarga en PDF del plan de entrenamiento y derecho a 1 videollamada de análisis y seguimiento.</p>
+                        <h3>Precio: <span>$29.99</span></h3>
+                        <button class="btn-buy" onclick="handlePlanSelection('basic')">Comenzar Ahora</button>
+                    </div>
+
+                    <div class="plan-detail">
+                        <h2>Plan GoUp</h2>
+                        <p>Acceso a programa de entrenamiento personalizado durante 3 meses, información nutricional, asesoría de uso de suplementos y plan de alimentación adecuado a las necesidades y 2 videollamadas de análisis y seguimiento por cada mes.</p>
+                        <h3>Precio: <span>$49.99</span></h3>
+                        <button class="btn-buy" onclick="handlePlanSelection('goup')">Comenzar Ahora</button>
+                    </div>
+
+                    <div class="plan-detail">
+                        <h2>Plan Expert</h2>
+                        <p>Acceso a programa de entrenamiento personalizado durante 6 meses, información y asesoría nutricional y de suplementos más el plan de alimentación adecuado a las necesidades y 3 videollamadas de análisis y seguimiento por cada mes.</p>
+                        <h3>Precio: <span>$79.99</span></h3>
+                        <button class="btn-buy" onclick="handlePlanSelection('expert')">Comenzar Ahora</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="cta-banner">
+        <div class="cta-container animate-zoom-in">
+            <h2>¿LISTO PARA TRANSFORMAR TU CUERPO?</h2>
+            <p>No esperes más para comenzar tu viaje hacia la mejor versión de ti mismo</p>
+            <a href="#plans" class="hero-button pulse">COMENZAR AHORA <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2><i class="fas fa-bolt"></i> DavisTrainer</h2>
+                    <p>Transformando vidas a través del entrenamiento personalizado y la nutrición científica.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-container">
+                    <div class="footer-links-column">
+                        <h3>Servicios</h3>
+                        <nav class="footer-links">
+                            <a href="#plans">Planes de Entrenamiento</a>
+                            <a href="#plans">Asesoría Nutricional</a>
+                            <a href="#plans">Coaching Online</a>
+                            <a href="#plans">Suplementación</a>
+                        </nav>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h3>Empresa</h3>
+                        <nav class="footer-links">
+                            <a href="#results">Resultados</a>
+                            <a href="#contact">Contacto</a>
+                            <a href="#">Sobre Mí</a>
+                            <a href="#">Blog</a>
+                        </nav>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h3>Legal</h3>
+                        <nav class="footer-links">
+                            <a href="#">Términos y Condiciones</a>
+                            <a href="#">Política de Privacidad</a>
+                            <a href="#">Política de Cookies</a>
+                            <a href="#">Aviso Legal</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 DavisTrainer. Todos los derechos reservados.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/planes.js"></script>
+</body>
+</html>
