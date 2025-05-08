@@ -1349,20 +1349,63 @@ main {
     font-size: 1.1rem;
 }
 
-.form-privacy {
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--color-text-secondary);
-    margin-top: 1rem;
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
 }
 
-.form-privacy a {
-    color: var(--color-secondary);
-    text-decoration: none;
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    margin-top: 3px;
+    min-width: 16px;
+    height: 16px;
 }
 
-.form-privacy a:hover {
+.checkbox-group label {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-bottom: 0;
+}
+
+.checkbox-group a {
+    color: var(--color-accent);
     text-decoration: underline;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    margin-left: 26px;
+    display: none;
+}
+
+.error-message.active {
+    display: block;
+}
+
+.form-message {
+    margin-top: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.form-message.success {
+    display: block;
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #27ae60;
+    border: 1px solid #27ae60;
+}
+
+.form-message.error {
+    display: block;
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
 }
 
 /* CTA Banner */

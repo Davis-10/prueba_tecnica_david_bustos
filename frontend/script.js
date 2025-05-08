@@ -304,5 +304,54 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Validación del formulario de contacto
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Verificar si el checkbox de política de privacidad está marcado
+            const privacyCheckbox = document.getElementById('privacy-policy');
+            const privacyError = document.getElementById('privacy-error');
+            const formMessage = document.getElementById('form-message');
+
+            if (!privacyCheckbox.checked) {
+                // Mostrar mensaje de error
+                privacyError.textContent = 'Por favor, acepta la política de privacidad para continuar.';
+                privacyError.classList.add('active');
+                return;
+            } else {
+                // Ocultar mensaje de error si estaba visible
+                privacyError.textContent = '';
+                privacyError.classList.remove('active');
+            }
+
+            // Si llegamos aquí, el formulario es válido
+            // Simulamos el envío del formulario
+            const submitBtn = document.getElementById('submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+
+            // Simulamos un tiempo de procesamiento
+            setTimeout(() => {
+                // Mostrar mensaje de éxito
+                formMessage.textContent = '¡Mensaje enviado con éxito! Te contactaremos pronto.';
+                formMessage.className = 'form-message success';
+
+                // Resetear el formulario
+                contactForm.reset();
+
+                // Restaurar el botón
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'ENVIAR MENSAJE <i class="fas fa-paper-plane"></i>';
+
+                // Ocultar el mensaje después de 5 segundos
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            }, 1500);
+        });
+    }
 });
 

@@ -382,11 +382,15 @@
                         <textarea id="message" name="message" rows="4" placeholder="Cuéntame sobre tus objetivos..." required></textarea>
                     </div>
 
-                    <button type="submit" class="btn-submit pulse">ENVIAR MENSAJE <i class="fas fa-paper-plane"></i></button>
-
-                    <div class="form-privacy">
-                        <p>Al enviar este formulario, aceptas nuestra <a href="#">política de privacidad</a>.</p>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="privacy-policy" name="privacy-policy">
+                        <label for="privacy-policy">Acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos.</label>
+                        <div id="privacy-error" class="error-message"></div>
                     </div>
+
+                    <button type="submit" id="submit-btn" class="btn-submit pulse">ENVIAR MENSAJE <i class="fas fa-paper-plane"></i></button>
+
+                    <div id="form-message" class="form-message"></div>
                 </form>
             </div>
         </div>
